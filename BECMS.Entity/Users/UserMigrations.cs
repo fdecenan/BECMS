@@ -1,6 +1,7 @@
 ﻿using BECMS.Entity.EntityDbContext;
 using BECMS.Models.Users;
 using FerPROJ.DBHelper.DBExtensions;
+using FerPROJ.Design.Class;
 using FerPROJ.Design.Interface;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,16 @@ namespace BECMS.Entity.Users {
         }
 
         public async Task RunMigrationAsync(BECMSDbContext dbContext) {
+
+            var passowrd = CEncryption.Encrypt("adminpassword");
+
             if (!dbContext.Users.Any(u => u.UserName == "adminusername")) {
-                await dbContext.SaveDTOAndCommitAsync<UserModel, User>(new UserModel { UserName = "adminusername", Password = "mypassword"});
+                await dbContext.SaveDTOAndCommitAsync<UserModel, User>(
+                    new UserModel {
+                        UserName = "adminusername",
+                        Password = passowrd
+                    }
+                );
             }
         }
     }

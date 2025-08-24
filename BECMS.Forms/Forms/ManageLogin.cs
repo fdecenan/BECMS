@@ -37,7 +37,7 @@ namespace BECMS.Forms.Forms {
         }
         protected override async Task<bool> OnSaveData() {
             using (var repo = new UserRepository()) {
-                return await repo.SaveDTOAsync(userModel);
+                return await repo.CheckCredentialsAsync(userModel);
             }
         }
     }
