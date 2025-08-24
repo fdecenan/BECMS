@@ -26,7 +26,7 @@ namespace BECMS.Main {
             try {
                 if (FormLayer.ManageForm.ManageLogin()) {
                     LoadCacheAsync();
-                    Application.Run(new Form1());
+                    Application.Run(new Dashboard());
                 }
             }
             catch (Exception ex) {
