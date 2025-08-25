@@ -1,4 +1,5 @@
 ﻿using BECMS.Base.Forms;
+using BECMS.Entity.Patients;
 using BECMS.Models.Patients;
 using BECMS.Repository;
 using FerPROJ.Design.Class;
@@ -19,6 +20,7 @@ namespace BECMS.Forms.Forms {
             InitializeComponent();
         }
         protected override async Task LoadComponents() {
+            LoadComboBox();
             switch (CurrentFormMode) {
                 case FormMode.Add:
                     break;
@@ -42,6 +44,10 @@ namespace BECMS.Forms.Forms {
             using (var repo = new PatientRepository()) {
                 return await repo.UpdateDTOAsync(model, true);
             }
+        }
+        private void LoadComboBox() {
+            genderCComboBoxKrypton.FillComboBoxEnum<CEnum.Gender>();
+            patientStatusCComboBoxKrypton.FillComboBoxEnum<PatientStatus>();
         }
     }
 }
