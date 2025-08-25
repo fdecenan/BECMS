@@ -1,4 +1,5 @@
-﻿using BECMS.Entity.Users;
+﻿using BECMS.Entity.Patients;
+using BECMS.Entity.Users;
 using FerPROJ.Design.Class;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace BECMS.Entity.EntityDbContext {
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Patient> Patients { get; set; }
 
     }
 }

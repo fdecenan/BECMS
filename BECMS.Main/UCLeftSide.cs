@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BECMS.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +64,14 @@ namespace BECMS.Main {
 
         private void btnManagePatients_Click(object sender, EventArgs e) {
             ChangeHeight(panelPatients, 2);
+        }
+
+        private async void btnListUser_Click(object sender, EventArgs e) {
+            await FormLayer.ListForm.ListUser();
+        }
+
+        private async void btnListPatients_Click(object sender, EventArgs e) {
+            await FormLayer.ListForm.ListPatient();
         }
     }
 }

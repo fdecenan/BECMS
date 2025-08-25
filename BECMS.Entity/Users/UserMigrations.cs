@@ -26,6 +26,7 @@ namespace BECMS.Entity.Users {
                 await dbContext.SaveDTOAndCommitAsync<UserModel, User>(
                     new UserModel {
                         UserName = "adminusername",
+                        Name = "System Administrator",
                         Password = passowrd,
                         UserRole = UserRoles.Administrator.ToString(),
                     }

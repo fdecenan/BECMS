@@ -117,59 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMain.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAANFJREFUWEft
-        VkEKAjEMnIOP8E1exS/5Da/il/yGHsVlDoUwJhspERbMwEDYdpKBbNMCjcYnLgBeAN4rfAI4Gg1jftN9
-        lszJ3Cmy4oNXo2Gs6x6ZO4WKIt6MhrGuR0yhgohtoA1sysDZWfd4N5oQKopoDewAHACcVshhtTeaEFoo
-        ojVQCi0U8WcG2Cct5pF9Hyi9C9gnJtQeWrLf7PtA6V0wg9JjOINSAzPvgVIDWfFB+x4oNaCCiJsaxW2g
-        1MDMT1g6iGaOIeOHs0+LfzWKG/+FBUrTvy33vZ76AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnDashboard.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAANFJREFUWEft
-        VkEKAjEMnIOP8E1exS/5Da/il/yGHsVlDoUwJhspERbMwEDYdpKBbNMCjcYnLgBeAN4rfAI4Gg1jftN9
-        lszJ3Cmy4oNXo2Gs6x6ZO4WKIt6MhrGuR0yhgohtoA1sysDZWfd4N5oQKopoDewAHACcVshhtTeaEFoo
-        ojVQCi0U8WcG2Cct5pF9Hyi9C9gnJtQeWrLf7PtA6V0wg9JjOINSAzPvgVIDWfFB+x4oNaCCiJsaxW2g
-        1MDMT1g6iGaOIeOHs0+LfzWKG/+FBUrTvy33vZ76AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnListUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAANFJREFUWEft
-        VkEKAjEMnIOP8E1exS/5Da/il/yGHsVlDoUwJhspERbMwEDYdpKBbNMCjcYnLgBeAN4rfAI4Gg1jftN9
-        lszJ3Cmy4oNXo2Gs6x6ZO4WKIt6MhrGuR0yhgohtoA1sysDZWfd4N5oQKopoDewAHACcVshhtTeaEFoo
-        ojVQCi0U8WcG2Cct5pF9Hyi9C9gnJtQeWrLf7PtA6V0wg9JjOINSAzPvgVIDWfFB+x4oNaCCiJsaxW2g
-        1MDMT1g6iGaOIeOHs0+LfzWKG/+FBUrTvy33vZ76AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnManageUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAANFJREFUWEft
-        VkEKAjEMnIOP8E1exS/5Da/il/yGHsVlDoUwJhspERbMwEDYdpKBbNMCjcYnLgBeAN4rfAI4Gg1jftN9
-        lszJ3Cmy4oNXo2Gs6x6ZO4WKIt6MhrGuR0yhgohtoA1sysDZWfd4N5oQKopoDewAHACcVshhtTeaEFoo
-        ojVQCi0U8WcG2Cct5pF9Hyi9C9gnJtQeWrLf7PtA6V0wg9JjOINSAzPvgVIDWfFB+x4oNaCCiJsaxW2g
-        1MDMT1g6iGaOIeOHs0+LfzWKG/+FBUrTvy33vZ76AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnListPatients.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAANFJREFUWEft
-        VkEKAjEMnIOP8E1exS/5Da/il/yGHsVlDoUwJhspERbMwEDYdpKBbNMCjcYnLgBeAN4rfAI4Gg1jftN9
-        lszJ3Cmy4oNXo2Gs6x6ZO4WKIt6MhrGuR0yhgohtoA1sysDZWfd4N5oQKopoDewAHACcVshhtTeaEFoo
-        ojVQCi0U8WcG2Cct5pF9Hyi9C9gnJtQeWrLf7PtA6V0wg9JjOINSAzPvgVIDWfFB+x4oNaCCiJsaxW2g
-        1MDMT1g6iGaOIeOHs0+LfzWKG/+FBUrTvy33vZ76AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnManagePatients.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAANFJREFUWEft
-        VkEKAjEMnIOP8E1exS/5Da/il/yGHsVlDoUwJhspERbMwEDYdpKBbNMCjcYnLgBeAN4rfAI4Gg1jftN9
-        lszJ3Cmy4oNXo2Gs6x6ZO4WKIt6MhrGuR0yhgohtoA1sysDZWfd4N5oQKopoDewAHACcVshhtTeaEFoo
-        ojVQCi0U8WcG2Cct5pF9Hyi9C9gnJtQeWrLf7PtA6V0wg9JjOINSAzPvgVIDWfFB+x4oNaCCiJsaxW2g
-        1MDMT1g6iGaOIeOHs0+LfzWKG/+FBUrTvy33vZ76AAAAAElFTkSuQmCC
-</value>
-  </data>
+  <metadata name="patientModelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>145, 17</value>
+  </metadata>
 </root>

@@ -21,8 +21,9 @@ namespace BECMS.Repository {
         public UserRepository(BECMSDbContext ts) : base(ts) {
         }
 
-        public Task<IEnumerable<User>> GetAllAsync(string searchText, DateTime? dateFrom, DateTime? dateTo) {
-            throw new NotImplementedException();
+        public async Task<IEnumerable<User>> GetAllAsync(string searchText, DateTime? dateFrom, DateTime? dateTo) {
+            var query = await GetAllWithSearchAsync(searchText, dateFrom, dateTo);
+            return query;
         }
 
         public Task<string> GetNewIDAsync() {
