@@ -68,6 +68,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCLeftSide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLeftSide.Designer.cs">
+      <DependentUpon>UCLeftSide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRightSide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRightSide.Designer.cs">
+      <DependentUpon>UCRightSide.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +92,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCLeftSide.resx">
+      <DependentUpon>UCLeftSide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRightSide.resx">
+      <DependentUpon>UCRightSide.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
