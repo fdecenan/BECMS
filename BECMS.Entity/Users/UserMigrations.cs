@@ -18,7 +18,7 @@ namespace BECMS.Entity.Users {
 
         public async Task RunMigrationAsync(BECMSDbContext dbContext) {
 
-            DBHelpers.UpdateTableOfEntity<User>(dbContext);
+            DBHelpers.CreateOrUpdateTableOfEntity<User>(dbContext);
 
             var passowrd = CEncryption.Encrypt("adminpassword");
 
