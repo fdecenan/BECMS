@@ -41,5 +41,9 @@ namespace BECMS.Forms.Forms {
                 return await repo.CheckCredentialsAsync(userModel);
             }
         }
+
+        private void cButtonClose_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
     }
 }

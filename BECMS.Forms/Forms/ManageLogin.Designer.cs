@@ -25,6 +25,7 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cLabelTitle4 = new FerPROJ.Design.Controls.CLabelTitle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbRememberMe = new System.Windows.Forms.CheckBox();
             this.cButtonLogin = new FerPROJ.Design.Controls.CButtonKrypton();
@@ -34,7 +35,7 @@
             this.cLabelTitle2 = new FerPROJ.Design.Controls.CLabelTitle();
             this.userNameCTextBoxKrypton = new FerPROJ.Design.Controls.CTextBoxKrypton();
             this.cLabelTitle1 = new FerPROJ.Design.Controls.CLabelTitle();
-            this.cLabelTitle4 = new FerPROJ.Design.Controls.CLabelTitle();
+            this.cButtonClose = new FerPROJ.Design.Controls.CButtonKrypton();
             this.basePnl2.SuspendLayout();
             this.PanelMain3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -76,10 +77,23 @@
             this.panel1.Size = new System.Drawing.Size(946, 433);
             this.panel1.TabIndex = 0;
             // 
+            // cLabelTitle4
+            // 
+            this.cLabelTitle4.BackColor = System.Drawing.Color.Transparent;
+            this.cLabelTitle4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cLabelTitle4.Font = new System.Drawing.Font("Impact", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cLabelTitle4.ForeColor = System.Drawing.Color.White;
+            this.cLabelTitle4.Location = new System.Drawing.Point(0, 0);
+            this.cLabelTitle4.Name = "cLabelTitle4";
+            this.cLabelTitle4.Size = new System.Drawing.Size(479, 433);
+            this.cLabelTitle4.TabIndex = 1;
+            this.cLabelTitle4.Text = "BLANCIA EYE CLINIC \r\nMANAGEMENT SYSTEM";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cButtonClose);
             this.panel2.Controls.Add(this.cbRememberMe);
             this.panel2.Controls.Add(this.cButtonLogin);
             this.panel2.Controls.Add(this.cLabelTitle3);
@@ -106,7 +120,7 @@
             // 
             // cButtonLogin
             // 
-            this.cButtonLogin.Location = new System.Drawing.Point(187, 314);
+            this.cButtonLogin.Location = new System.Drawing.Point(118, 311);
             this.cButtonLogin.Name = "cButtonLogin";
             this.cButtonLogin.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Black;
             this.cButtonLogin.Size = new System.Drawing.Size(117, 36);
@@ -260,17 +274,37 @@
             this.cLabelTitle1.TabIndex = 0;
             this.cLabelTitle1.Text = "LOGIN";
             // 
-            // cLabelTitle4
+            // cButtonClose
             // 
-            this.cLabelTitle4.BackColor = System.Drawing.Color.Transparent;
-            this.cLabelTitle4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cLabelTitle4.Font = new System.Drawing.Font("Impact", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cLabelTitle4.ForeColor = System.Drawing.Color.White;
-            this.cLabelTitle4.Location = new System.Drawing.Point(0, 0);
-            this.cLabelTitle4.Name = "cLabelTitle4";
-            this.cLabelTitle4.Size = new System.Drawing.Size(479, 433);
-            this.cLabelTitle4.TabIndex = 1;
-            this.cLabelTitle4.Text = "BLANCIA EYE CLINIC \r\nMANAGEMENT SYSTEM";
+            this.cButtonClose.Location = new System.Drawing.Point(250, 311);
+            this.cButtonClose.Name = "cButtonClose";
+            this.cButtonClose.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Black;
+            this.cButtonClose.Size = new System.Drawing.Size(117, 36);
+            this.cButtonClose.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cButtonClose.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.cButtonClose.StateCommon.Border.Rounding = 15;
+            this.cButtonClose.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.cButtonClose.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.cButtonClose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.cButtonClose.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.cButtonClose.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.cButtonClose.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButtonClose.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.cButtonClose.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cButtonClose.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.cButtonClose.StateNormal.Border.Rounding = 15;
+            this.cButtonClose.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.cButtonClose.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.cButtonClose.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.cButtonClose.StateNormal.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.cButtonClose.StateNormal.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.cButtonClose.TabIndex = 20;
+            this.cButtonClose.Values.Text = "Close";
+            this.cButtonClose.Click += new System.EventHandler(this.cButtonClose_Click);
             // 
             // ManageLogin
             // 
@@ -305,5 +339,6 @@
         private FerPROJ.Design.Controls.CLabelTitle cLabelTitle2;
         private System.Windows.Forms.CheckBox cbRememberMe;
         private FerPROJ.Design.Controls.CLabelTitle cLabelTitle4;
+        private FerPROJ.Design.Controls.CButtonKrypton cButtonClose;
     }
 }
