@@ -14,6 +14,7 @@ namespace BECMS.Entity.EntityDbContext {
 
         public BECMSDbContext() : base("name=BECMSDbConnection") {
             Database.Connection.ConnectionString = CStaticVariable.ENTITY_CONNECTION_STRING;
+            Database.SetInitializer<BECMSDbContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) {
