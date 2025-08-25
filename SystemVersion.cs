@@ -17,4 +17,4 @@ Build for initial testing phase 3
 
 
 
-[assembly: AssemblyVersion("1.1.22.2025")]
+[assembly: AssemblyVersion("1.1.1.2025")]

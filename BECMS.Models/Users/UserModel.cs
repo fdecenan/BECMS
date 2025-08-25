@@ -1,4 +1,5 @@
 ﻿using FerPROJ.Design.BaseModels;
+using FerPROJ.Design.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace BECMS.Models.Users {
         public string UserRole { get; set; }
 
         public override bool DataValidation() {
+            Password = CEncryption.Encrypt(Password);
             return true;
         }
     }

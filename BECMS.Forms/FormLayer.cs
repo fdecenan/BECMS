@@ -16,6 +16,14 @@ namespace BECMS.Forms {
                     return frm.CurrentFormResult.Result;
                 }
             }
+            public async static Task<bool> ManageUser(Guid id, FormMode formMode) {
+                using (var frm = new ManageUser()) {
+                    frm.Manage_IdTrack = id;
+                    frm.CurrentFormMode = formMode;
+                    frm.ShowDialog();
+                    return await frm.CurrentFormResult;
+                }
+            }
             public async static Task<bool> ManagePatient(Guid id, FormMode formMode) {
                 using (var frm = new ManagePatient()) {
                     frm.Manage_IdTrack = id;

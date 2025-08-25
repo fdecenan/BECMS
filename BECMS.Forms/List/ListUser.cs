@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static FerPROJ.Design.Forms.FrmManageKrypton;
 
 namespace BECMS.Forms.List {
     public partial class ListUser : ListForm {
@@ -21,6 +22,15 @@ namespace BECMS.Forms.List {
                 var users = repo.GetAllAsync(searchValue, dateFrom, dateTo);
                 await userModelBindingSource.LoadDataAsync(users);
             }
+        }
+        protected override async Task<bool> AddNewItem() {
+            return await FormLayer.ManageForm.ManageUser(Guid.Empty, FormMode.Add);
+        }
+        protected override async Task<bool> UpdateItem() {
+            if(userModelCDatagridview.GetSelectedValue(Id.Index, out Form_IdTrack)) {
+                return await FormLayer.ManageForm.ManageUser(Form_IdTrack.ToGuid(), FormMode.Update);
+            }
+            return false;
         }
     }
 }

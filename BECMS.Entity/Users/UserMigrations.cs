@@ -28,7 +28,7 @@ namespace BECMS.Entity.Users {
                         UserName = "adminusername",
                         Name = "System Administrator",
                         Password = passowrd,
-                        UserRole = UserRoles.Administrator.ToString(),
+                        UserRole = CEnum.Role.Administrator.ToString(),
                     }
                 );
             }
