@@ -18,7 +18,7 @@ namespace BECMS.Main {
         }
 
         private void timer1_Tick(object sender, EventArgs e) {
-            cLabelDateTime.Text = CGet.CurrentDateTime();
+            cLabelDateTime.Text = CGet.CurrentDateTime(true);
             cLabelTitleUser.Text = CStaticVariable.USERNAME;
             cLabelTitleVersion.Text = CAssembly.SystemVersion;
         }

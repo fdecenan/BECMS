@@ -183,7 +183,7 @@
             // 
             // cLabelDateTime
             // 
-            this.cLabelDateTime.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cLabelDateTime.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cLabelDateTime.Location = new System.Drawing.Point(5, 11);
             this.cLabelDateTime.Name = "cLabelDateTime";
             this.cLabelDateTime.Size = new System.Drawing.Size(213, 29);
