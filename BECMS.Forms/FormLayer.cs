@@ -1,5 +1,6 @@
 ﻿using BECMS.Forms.Forms;
 using BECMS.Forms.List;
+using FerPROJ.Design.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 using static FerPROJ.Design.Forms.FrmManageKrypton;
 
 namespace BECMS.Forms {
-    public class FormLayer {
+    public class FormLayer : CBaseFormLayer {
         public static class ManageForm {
             public static bool ManageLogin() {
                 using (var frm = new ManageLogin()) {
