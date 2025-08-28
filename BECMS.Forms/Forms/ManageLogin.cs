@@ -22,7 +22,7 @@ namespace BECMS.Forms.Forms {
 
         protected override async Task LoadComponents() {
             userModelBindingSource.DataSource = userModel;
-            userModel.UserName = CLibFilesReader.GetRememberedUsername(cbRememberMe, userNameCTextBoxKrypton);
+            userModel.UserName = CConfigurationManager.GetRememberedUsername(cbRememberMe, userNameCTextBoxKrypton);
             await Task.CompletedTask;
         }
 
