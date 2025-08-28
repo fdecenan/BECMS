@@ -13,7 +13,7 @@ namespace BECMS.Models.Users {
         public string UserRole { get; set; }
 
         public override bool DataValidation() {
-            Password = CEncryption.Encrypt(Password);
+            Password = CEncryptionManager.Encrypt(Password);
             return true;
         }
     }

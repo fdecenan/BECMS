@@ -19,7 +19,7 @@ namespace BECMS.Forms.Forms {
             InitializeComponent();
         }
         protected override async Task LoadComponents() {
-            userRoleCComboBoxKrypton.FillComboBoxEnum<CEnum.Role>();
+            userRoleCComboBoxKrypton.FillComboBoxEnum<CBaseEnums.Role>();
             switch (CurrentFormMode) {
                 case FormMode.Add:
                     break;
@@ -27,7 +27,7 @@ namespace BECMS.Forms.Forms {
                     using (var repo = new UserRepository()) {
                         var entity = await repo.GetByIdAsync(Manage_IdTrack);
                         model = entity.ToDestination<UserModel>();
-                        model.Password = CEncryption.Decrypt(entity.Password);
+                        model.Password = CEncryptionManager.Decrypt(entity.Password);
                     }
                     break;
                 default:

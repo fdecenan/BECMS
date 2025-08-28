@@ -1,5 +1,4 @@
-﻿using FerPROJ.DBHelper.Class;
-using FerPROJ.Design.Class;
+﻿using FerPROJ.Design.Class;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +17,9 @@ namespace BECMS.Main {
         }
 
         private void timer1_Tick(object sender, EventArgs e) {
-            cLabelDateTime.Text = CGet.CurrentDateTime(true);
-            cLabelTitleUser.Text = CStaticVariable.USERNAME;
-            cLabelTitleVersion.Text = CAssembly.SystemVersion;
+            cLabelDateTime.Text = CAccessManager.CurrentDateTime(true);
+            cLabelTitleUser.Text = CAppConstants.USERNAME;
+            cLabelTitleVersion.Text = CBaseAssembly.SystemVersion;
         }
     }
 }

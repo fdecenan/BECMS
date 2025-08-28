@@ -22,7 +22,7 @@ namespace BECMS.Main {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            CAssembly.SetAssembly(Assembly.GetExecutingAssembly());
+            CBaseAssembly.SetAssembly(Assembly.GetExecutingAssembly());
             try {
                 if (FormLayer.ManageForm.ManageLogin()) {
                     LoadCacheAsync();
@@ -30,7 +30,7 @@ namespace BECMS.Main {
                 }
             }
             catch (Exception ex) {
-                CShowMessage.Warning(ex.Message);
+                CDialogManager.Warning(ex.Message);
             }
         }
         static async void LoadCacheAsync() {

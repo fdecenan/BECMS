@@ -20,7 +20,7 @@ namespace BECMS.Entity.Users {
 
             DBHelpers.CreateOrUpdateTableOfEntity<User>(dbContext);
 
-            var passowrd = CEncryption.Encrypt("adminpassword");
+            var passowrd = CEncryptionManager.Encrypt("adminpassword");
 
             if (!dbContext.Users.Any(u => u.UserName == "adminusername")) {
                 await dbContext.SaveDTOAndCommitAsync<UserModel, User>(
@@ -28,7 +28,7 @@ namespace BECMS.Entity.Users {
                         UserName = "adminusername",
                         Name = "System Administrator",
                         Password = passowrd,
-                        UserRole = CEnum.Role.Administrator.ToString(),
+                        UserRole = CBaseEnums.Role.Administrator.ToString(),
                     }
                 );
             }

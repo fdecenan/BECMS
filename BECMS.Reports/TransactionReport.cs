@@ -90,13 +90,13 @@ namespace BECMS.Reports {
                 FrmSplasherLoading.SetLoadingText(100);
                 var report = (ReportDocument)e.Result;
                 if (report != null) {
-                    await CReport.GenerateReport(report);
+                    await CBaseReportLayer.GenerateReport(report);
                     FrmSplasherLoading.CloseSplash();
                 }
             };
 
             // Call the extension method to run the background task with progress reporting
-            await CTaskBackground.RunWithProgressAsync(doWorkAsync, progressChangedAsync, runWorkerCompletedAsync);
+            await CBackgroundTaskManager.RunWithProgressAsync(doWorkAsync, progressChangedAsync, runWorkerCompletedAsync);
         }
     }
 }

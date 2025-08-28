@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BECMS.Repository {
-    public class PatientRepository : BaseDBEntityAsync<BECMSDbContext, PatientModel, Patient, Guid>, IEntityDataAsync<Patient> {
+    public class PatientRepository : BaseRepository<BECMSDbContext, PatientModel, Patient, Guid>, IEntityDataAsync<Patient> {
         public PatientRepository() {
         }
 

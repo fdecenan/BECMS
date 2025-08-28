@@ -46,7 +46,7 @@ namespace BECMS.Forms.Forms {
             }
         }
         private void LoadComboBox() {
-            genderCComboBoxKrypton.FillComboBoxEnum<CEnum.Gender>();
+            genderCComboBoxKrypton.FillComboBoxEnum<CBaseEnums.Gender>();
             patientStatusCComboBoxKrypton.FillComboBoxEnum<PatientStatus>();
         }
     }

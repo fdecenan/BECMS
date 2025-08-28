@@ -13,7 +13,7 @@ namespace BECMS.Entity.EntityDbContext {
     public partial class BECMSDbContext : DbContext {
 
         public BECMSDbContext() : base("name=BECMSDbConnection") {
-            Database.Connection.ConnectionString = CStaticVariable.ENTITY_CONNECTION_STRING;
+            Database.Connection.ConnectionString = CAppConstants.ENTITY_CONNECTION_STRING;
             Database.SetInitializer<BECMSDbContext>(null);
         }
 
