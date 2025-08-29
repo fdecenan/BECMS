@@ -36,7 +36,7 @@ namespace BECMS.Repository {
 
         public async Task<bool> CheckCredentialsAsync(UserModel model) {
             
-            model.Password = CEncryptionManager.Encrypt(model.Password);
+            model.Password = CEncryptionManager.EncryptText(model.Password);
 
             var entity = await GetByPredicateAsync(c=>c.UserName == model.UserName && c.Password == model.Password);
 

@@ -27,7 +27,7 @@ namespace BECMS.Forms.Forms {
                     using (var repo = new UserRepository()) {
                         var entity = await repo.GetByIdAsync(Manage_IdTrack);
                         model = entity.ToDestination<UserModel>();
-                        model.Password = CEncryptionManager.Decrypt(entity.Password);
+                        model.Password = CEncryptionManager.DecryptText(entity.Password);
                     }
                     break;
                 default:
