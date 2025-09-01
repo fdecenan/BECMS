@@ -28,7 +28,7 @@ namespace BECMS.Reports {
                 var rpt = new PatientPrescriptionPrint();
                 var entity = await repo.GetByIdAsync(id);
                 var model = entity.ToDestination<PatientPrescriptionModel>();
-                var entityDataTable = await model.ToDataTable();
+                var entityDataTable = await model.ToDataTableAsync();
                 rpt.SetDataSource(entityDataTable);
                 return rpt;
             }
