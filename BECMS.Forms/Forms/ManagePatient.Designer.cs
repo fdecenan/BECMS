@@ -154,20 +154,20 @@
             // 
             ageLabel.AutoSize = true;
             ageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ageLabel.Location = new System.Drawing.Point(41, 121);
+            ageLabel.Location = new System.Drawing.Point(310, 121);
             ageLabel.Name = "ageLabel";
             ageLabel.Size = new System.Drawing.Size(42, 20);
-            ageLabel.TabIndex = 6;
+            ageLabel.TabIndex = 8;
             ageLabel.Text = "Age:";
             // 
             // genderLabel
             // 
             genderLabel.AutoSize = true;
             genderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            genderLabel.Location = new System.Drawing.Point(310, 121);
+            genderLabel.Location = new System.Drawing.Point(310, 224);
             genderLabel.Name = "genderLabel";
             genderLabel.Size = new System.Drawing.Size(67, 20);
-            genderLabel.TabIndex = 8;
+            genderLabel.TabIndex = 14;
             genderLabel.Text = "Gender:";
             // 
             // patientStatusLabel
@@ -194,11 +194,51 @@
             // 
             birthdateLabel.AutoSize = true;
             birthdateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            birthdateLabel.Location = new System.Drawing.Point(310, 224);
+            birthdateLabel.Location = new System.Drawing.Point(41, 121);
             birthdateLabel.Name = "birthdateLabel";
             birthdateLabel.Size = new System.Drawing.Size(78, 20);
-            birthdateLabel.TabIndex = 14;
+            birthdateLabel.TabIndex = 6;
             birthdateLabel.Text = "Birthdate:";
+            // 
+            // contactNumberLabel
+            // 
+            contactNumberLabel.AutoSize = true;
+            contactNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            contactNumberLabel.Location = new System.Drawing.Point(608, 224);
+            contactNumberLabel.Name = "contactNumberLabel";
+            contactNumberLabel.Size = new System.Drawing.Size(129, 20);
+            contactNumberLabel.TabIndex = 16;
+            contactNumberLabel.Text = "Contact Number:";
+            // 
+            // occupationLabel
+            // 
+            occupationLabel.AutoSize = true;
+            occupationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            occupationLabel.Location = new System.Drawing.Point(41, 331);
+            occupationLabel.Name = "occupationLabel";
+            occupationLabel.Size = new System.Drawing.Size(94, 20);
+            occupationLabel.TabIndex = 18;
+            occupationLabel.Text = "Occupation:";
+            // 
+            // referredByLabel
+            // 
+            referredByLabel.AutoSize = true;
+            referredByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            referredByLabel.Location = new System.Drawing.Point(310, 331);
+            referredByLabel.Name = "referredByLabel";
+            referredByLabel.Size = new System.Drawing.Size(98, 20);
+            referredByLabel.TabIndex = 20;
+            referredByLabel.Text = "Referred By:";
+            // 
+            // dateCreatedStringLabel
+            // 
+            dateCreatedStringLabel.AutoSize = true;
+            dateCreatedStringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dateCreatedStringLabel.Location = new System.Drawing.Point(608, 331);
+            dateCreatedStringLabel.Name = "dateCreatedStringLabel";
+            dateCreatedStringLabel.Size = new System.Drawing.Size(155, 20);
+            dateCreatedStringLabel.TabIndex = 22;
+            dateCreatedStringLabel.Text = "Date Created String:";
             // 
             // patientModelBindingSource
             // 
@@ -330,9 +370,10 @@
             // ageCNumericUpDownKrypton
             // 
             this.ageCNumericUpDownKrypton.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.patientModelBindingSource, "Age", true));
-            this.ageCNumericUpDownKrypton.Location = new System.Drawing.Point(44, 150);
+            this.ageCNumericUpDownKrypton.Enabled = false;
+            this.ageCNumericUpDownKrypton.Location = new System.Drawing.Point(313, 150);
             this.ageCNumericUpDownKrypton.Name = "ageCNumericUpDownKrypton";
-            this.ageCNumericUpDownKrypton.Size = new System.Drawing.Size(216, 28);
+            this.ageCNumericUpDownKrypton.Size = new System.Drawing.Size(230, 28);
             this.ageCNumericUpDownKrypton.StateActive.Border.Color1 = System.Drawing.Color.DarkGray;
             this.ageCNumericUpDownKrypton.StateActive.Border.Color2 = System.Drawing.Color.White;
             this.ageCNumericUpDownKrypton.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -352,7 +393,7 @@
             this.ageCNumericUpDownKrypton.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.ageCNumericUpDownKrypton.TabIndex = 7;
+            this.ageCNumericUpDownKrypton.TabIndex = 9;
             // 
             // genderCComboBoxKrypton
             // 
@@ -360,7 +401,7 @@
             this.genderCComboBoxKrypton.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.genderCComboBoxKrypton.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientModelBindingSource, "Gender", true));
             this.genderCComboBoxKrypton.DropDownWidth = 115;
-            this.genderCComboBoxKrypton.Location = new System.Drawing.Point(313, 150);
+            this.genderCComboBoxKrypton.Location = new System.Drawing.Point(314, 257);
             this.genderCComboBoxKrypton.Name = "genderCComboBoxKrypton";
             this.genderCComboBoxKrypton.Size = new System.Drawing.Size(230, 27);
             this.genderCComboBoxKrypton.StateActive.ComboBox.Border.Color1 = System.Drawing.Color.DarkGray;
@@ -377,7 +418,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.genderCComboBoxKrypton.StateDisabled.ComboBox.Border.Rounding = 10;
             this.genderCComboBoxKrypton.StateDisabled.ComboBox.Content.Color1 = System.Drawing.Color.Black;
-            this.genderCComboBoxKrypton.TabIndex = 9;
+            this.genderCComboBoxKrypton.TabIndex = 15;
             this.genderCComboBoxKrypton.Text = "cComboBoxKrypton1";
             // 
             // patientStatusCComboBoxKrypton
@@ -451,7 +492,7 @@
             // 
             this.birthdateCDateTimePickerKrypton.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.patientModelBindingSource, "Birthdate", true));
             this.birthdateCDateTimePickerKrypton.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birthdateCDateTimePickerKrypton.Location = new System.Drawing.Point(313, 256);
+            this.birthdateCDateTimePickerKrypton.Location = new System.Drawing.Point(44, 151);
             this.birthdateCDateTimePickerKrypton.Name = "birthdateCDateTimePickerKrypton";
             this.birthdateCDateTimePickerKrypton.ShowUpDown = true;
             this.birthdateCDateTimePickerKrypton.Size = new System.Drawing.Size(230, 27);
@@ -474,17 +515,7 @@
             this.birthdateCDateTimePickerKrypton.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.birthdateCDateTimePickerKrypton.TabIndex = 15;
-            // 
-            // contactNumberLabel
-            // 
-            contactNumberLabel.AutoSize = true;
-            contactNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contactNumberLabel.Location = new System.Drawing.Point(608, 224);
-            contactNumberLabel.Name = "contactNumberLabel";
-            contactNumberLabel.Size = new System.Drawing.Size(129, 20);
-            contactNumberLabel.TabIndex = 16;
-            contactNumberLabel.Text = "Contact Number:";
+            this.birthdateCDateTimePickerKrypton.TabIndex = 7;
             // 
             // contactNumberCTextBoxKrypton
             // 
@@ -527,16 +558,6 @@
             this.contactNumberCTextBoxKrypton.TabIndex = 17;
             this.contactNumberCTextBoxKrypton.Text = "cTextBoxKrypton1";
             // 
-            // occupationLabel
-            // 
-            occupationLabel.AutoSize = true;
-            occupationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            occupationLabel.Location = new System.Drawing.Point(41, 331);
-            occupationLabel.Name = "occupationLabel";
-            occupationLabel.Size = new System.Drawing.Size(94, 20);
-            occupationLabel.TabIndex = 18;
-            occupationLabel.Text = "Occupation:";
-            // 
             // occupationCTextBoxKrypton
             // 
             this.occupationCTextBoxKrypton.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientModelBindingSource, "Occupation", true));
@@ -578,16 +599,6 @@
             this.occupationCTextBoxKrypton.TabIndex = 19;
             this.occupationCTextBoxKrypton.Text = "cTextBoxKrypton1";
             // 
-            // referredByLabel
-            // 
-            referredByLabel.AutoSize = true;
-            referredByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            referredByLabel.Location = new System.Drawing.Point(310, 331);
-            referredByLabel.Name = "referredByLabel";
-            referredByLabel.Size = new System.Drawing.Size(98, 20);
-            referredByLabel.TabIndex = 20;
-            referredByLabel.Text = "Referred By:";
-            // 
             // referredByCTextBoxKrypton
             // 
             this.referredByCTextBoxKrypton.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientModelBindingSource, "ReferredBy", true));
@@ -628,16 +639,6 @@
             this.referredByCTextBoxKrypton.StateNormal.Content.Color1 = System.Drawing.Color.Black;
             this.referredByCTextBoxKrypton.TabIndex = 21;
             this.referredByCTextBoxKrypton.Text = "cTextBoxKrypton1";
-            // 
-            // dateCreatedStringLabel
-            // 
-            dateCreatedStringLabel.AutoSize = true;
-            dateCreatedStringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dateCreatedStringLabel.Location = new System.Drawing.Point(608, 331);
-            dateCreatedStringLabel.Name = "dateCreatedStringLabel";
-            dateCreatedStringLabel.Size = new System.Drawing.Size(155, 20);
-            dateCreatedStringLabel.TabIndex = 22;
-            dateCreatedStringLabel.Text = "Date Created String:";
             // 
             // dateCreatedStringCTextBoxKrypton
             // 

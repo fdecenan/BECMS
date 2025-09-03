@@ -15,7 +15,7 @@ namespace BECMS.Models.Patients {
         public string Gender { get; set; }
         public string PatientStatus { get; set; }
         public string PatientAddress { get; set; }
-        public DateTime Birthdate { get; set; } = DateTime.Now;
+        public DateTime Birthdate { get; set; } = DateTime.Now.AddYears(-10);
         public string ContactNumber { get; set; }
         public string EmailAddress { get; set; } = null;
         public string Occupation { get; set; }
