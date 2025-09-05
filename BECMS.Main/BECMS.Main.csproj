@@ -80,6 +80,12 @@
     <Compile Include="UCLeftSide.Designer.cs">
       <DependentUpon>UCLeftSide.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCLeftSideMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLeftSideMenu.Designer.cs">
+      <DependentUpon>UCLeftSideMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCRightSide.cs">
       <SubType>UserControl</SubType>
     </Compile>

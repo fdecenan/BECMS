@@ -28,17 +28,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelCenter = new System.Windows.Forms.Panel();
             this.panelRightSide = new System.Windows.Forms.Panel();
-            this.ucRightSide1 = new BECMS.Main.UCRightSide();
             this.leftSidePanel = new System.Windows.Forms.Panel();
-            this.ucLeftSide1 = new BECMS.Main.UCLeftSide();
             this.topPanel = new System.Windows.Forms.Panel();
             this.panelTopRight = new System.Windows.Forms.Panel();
-            this.cLabelTitle1 = new FerPROJ.Design.Controls.CLabelTitle();
             this.panelTopLeft = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ucRightSide1 = new BECMS.Main.UCRightSide();
+            this.cLabelTitle1 = new FerPROJ.Design.Controls.CLabelTitle();
             this.cLabelTitleVersion = new FerPROJ.Design.Controls.CLabelTitle();
             this.cLabelTitleUser = new FerPROJ.Design.Controls.CLabelTitle();
             this.cLabelDateTime = new FerPROJ.Design.Controls.CLabelTitle();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ucLeftSideMenu1 = new BECMS.Main.UCLeftSideMenu();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelRightSide.SuspendLayout();
@@ -91,31 +91,15 @@
             this.panelRightSide.Size = new System.Drawing.Size(224, 635);
             this.panelRightSide.TabIndex = 1;
             // 
-            // ucRightSide1
-            // 
-            this.ucRightSide1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucRightSide1.Location = new System.Drawing.Point(0, 0);
-            this.ucRightSide1.Name = "ucRightSide1";
-            this.ucRightSide1.Size = new System.Drawing.Size(222, 633);
-            this.ucRightSide1.TabIndex = 0;
-            // 
             // leftSidePanel
             // 
             this.leftSidePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.leftSidePanel.Controls.Add(this.ucLeftSide1);
+            this.leftSidePanel.Controls.Add(this.ucLeftSideMenu1);
             this.leftSidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftSidePanel.Location = new System.Drawing.Point(0, 0);
             this.leftSidePanel.Name = "leftSidePanel";
             this.leftSidePanel.Size = new System.Drawing.Size(275, 635);
             this.leftSidePanel.TabIndex = 0;
-            // 
-            // ucLeftSide1
-            // 
-            this.ucLeftSide1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucLeftSide1.Location = new System.Drawing.Point(0, 0);
-            this.ucLeftSide1.Name = "ucLeftSide1";
-            this.ucLeftSide1.Size = new System.Drawing.Size(273, 633);
-            this.ucLeftSide1.TabIndex = 0;
             // 
             // topPanel
             // 
@@ -139,18 +123,6 @@
             this.panelTopRight.Size = new System.Drawing.Size(1060, 117);
             this.panelTopRight.TabIndex = 1;
             // 
-            // cLabelTitle1
-            // 
-            this.cLabelTitle1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cLabelTitle1.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cLabelTitle1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.cLabelTitle1.Location = new System.Drawing.Point(0, 0);
-            this.cLabelTitle1.Name = "cLabelTitle1";
-            this.cLabelTitle1.Size = new System.Drawing.Size(1058, 115);
-            this.cLabelTitle1.TabIndex = 0;
-            this.cLabelTitle1.Text = "BLANCIA EYE CLINIC MANAGEMENT SYSTEM";
-            this.cLabelTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panelTopLeft
             // 
             this.panelTopLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -162,6 +134,30 @@
             this.panelTopLeft.Name = "panelTopLeft";
             this.panelTopLeft.Size = new System.Drawing.Size(223, 117);
             this.panelTopLeft.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ucRightSide1
+            // 
+            this.ucRightSide1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucRightSide1.Location = new System.Drawing.Point(0, 0);
+            this.ucRightSide1.Name = "ucRightSide1";
+            this.ucRightSide1.Size = new System.Drawing.Size(222, 633);
+            this.ucRightSide1.TabIndex = 0;
+            // 
+            // cLabelTitle1
+            // 
+            this.cLabelTitle1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cLabelTitle1.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cLabelTitle1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.cLabelTitle1.Location = new System.Drawing.Point(0, 0);
+            this.cLabelTitle1.Name = "cLabelTitle1";
+            this.cLabelTitle1.Size = new System.Drawing.Size(1058, 115);
+            this.cLabelTitle1.TabIndex = 0;
+            this.cLabelTitle1.Text = "BLANCIA EYE CLINIC MANAGEMENT SYSTEM";
+            this.cLabelTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cLabelTitleVersion
             // 
@@ -190,9 +186,13 @@
             this.cLabelDateTime.TabIndex = 0;
             this.cLabelDateTime.Text = "cLabelTitle1";
             // 
-            // timer1
+            // ucLeftSideMenu1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.ucLeftSideMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLeftSideMenu1.Location = new System.Drawing.Point(0, 0);
+            this.ucLeftSideMenu1.Name = "ucLeftSideMenu1";
+            this.ucLeftSideMenu1.Size = new System.Drawing.Size(273, 633);
+            this.ucLeftSideMenu1.TabIndex = 0;
             // 
             // Dashboard
             // 
@@ -220,7 +220,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel leftSidePanel;
         private System.Windows.Forms.Panel topPanel;
-        private UCLeftSide ucLeftSide1;
         private System.Windows.Forms.Panel panelRightSide;
         private System.Windows.Forms.Panel panelCenter;
         private UCRightSide ucRightSide1;
@@ -231,6 +230,7 @@
         private FerPROJ.Design.Controls.CLabelTitle cLabelDateTime;
         private System.Windows.Forms.Timer timer1;
         private FerPROJ.Design.Controls.CLabelTitle cLabelTitle1;
+        private UCLeftSideMenu ucLeftSideMenu1;
     }
 }
 
