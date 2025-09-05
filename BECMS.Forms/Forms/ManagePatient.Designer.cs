@@ -491,11 +491,9 @@
             // birthdateCDateTimePickerKrypton
             // 
             this.birthdateCDateTimePickerKrypton.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.patientModelBindingSource, "Birthdate", true));
-            this.birthdateCDateTimePickerKrypton.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birthdateCDateTimePickerKrypton.Location = new System.Drawing.Point(44, 151);
             this.birthdateCDateTimePickerKrypton.Name = "birthdateCDateTimePickerKrypton";
-            this.birthdateCDateTimePickerKrypton.ShowUpDown = true;
-            this.birthdateCDateTimePickerKrypton.Size = new System.Drawing.Size(230, 27);
+            this.birthdateCDateTimePickerKrypton.Size = new System.Drawing.Size(216, 27);
             this.birthdateCDateTimePickerKrypton.StateActive.Border.Color1 = System.Drawing.Color.DarkGray;
             this.birthdateCDateTimePickerKrypton.StateActive.Border.Color2 = System.Drawing.Color.White;
             this.birthdateCDateTimePickerKrypton.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
