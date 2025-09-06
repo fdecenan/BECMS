@@ -101,6 +101,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
             this.patientModelCDatagridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.patientModelCDatagridview.AutoGenerateColumns = false;
+            this.patientModelCDatagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.patientModelCDatagridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.patientModelCDatagridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.patientModelCDatagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
