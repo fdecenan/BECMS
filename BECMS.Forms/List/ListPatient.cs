@@ -1,4 +1,5 @@
 ﻿using BECMS.Base.Forms;
+using BECMS.Models.Patients;
 using BECMS.Reports;
 using BECMS.Repository;
 using FerPROJ.Design.Class;
@@ -17,6 +18,7 @@ namespace BECMS.Forms.List {
     public partial class ListPatient : ListForm {
         public ListPatient() {
             InitializeComponent();
+            patientModelCDatagridview.ApplyCustomAttribute(typeof(PatientModel));
         }
         protected override async Task RefreshData() {
             using (var repo = new PatientRepository()) {

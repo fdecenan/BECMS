@@ -1,4 +1,5 @@
 ﻿using BECMS.Base.Forms;
+using BECMS.Models.Users;
 using BECMS.Repository;
 using FerPROJ.Design.Class;
 using System;
@@ -16,6 +17,7 @@ namespace BECMS.Forms.List {
     public partial class ListUser : ListForm {
         public ListUser() {
             InitializeComponent();
+            userModelCDatagridview.ApplyCustomAttribute(typeof(UserModel));
         }
         protected override async Task RefreshData() {
             using(var repo = new UserRepository()) {

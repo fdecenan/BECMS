@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BECMS.Models.PatientRecords {
     public class PatientRecordItemModel : BaseModelItem {
-        [CDGVAttributes(IsEditable = true)]
+        [GridColumnAttributes(IsEditable = true)]
         public string TreatmentPlan { get; set; }
-        [CDGVAttributes(IsEditable = true)]
+        [GridColumnAttributes(IsEditable = true)]
         public string Prescription { get; set; }
         public override bool DataValidation() {
             throw new NotImplementedException();
