@@ -33,6 +33,14 @@ namespace BECMS.Forms {
                     return await frm.CurrentFormResult;
                 }
             }
+            public async static Task<bool> ManagePatientRecord(Guid id, FormMode formMode) {
+                using (var frm = new ManagePatientRecord()) {
+                    frm.Manage_IdTrack = id;
+                    frm.CurrentFormMode = formMode;
+                    frm.ShowDialog();
+                    return await frm.CurrentFormResult;
+                }
+            }
         }
 
         public static class ListForm {
@@ -46,6 +54,23 @@ namespace BECMS.Forms {
                 using (var frm = new ListPatient()) {
                     frm.ShowDialog();
                     return await Task.FromResult(true);
+                }
+            }
+            public async static Task<bool> ListPatientRecord() {
+                using (var frm = new ListPatientRecord()) {
+                    frm.ShowDialog();
+                    return await Task.FromResult(true);
+                }
+            }
+        }
+
+        public static class SelectListForm {
+            public static Task<bool> ListPatient(out Guid id) {
+                using (var frm = new ListPatient()) {
+                    frm.CurrentManageMode = false;
+                    frm.ShowDialog();
+                    id = frm.Form_IdTrack.ToGuid();
+                    return Task.FromResult(true);
                 }
             }
         }

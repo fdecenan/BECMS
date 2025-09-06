@@ -1,4 +1,5 @@
-﻿using BECMS.Entity.Patients;
+﻿using BECMS.Entity.PatientRecords;
+using BECMS.Entity.Patients;
 using BECMS.Entity.Users;
 using FerPROJ.Design.Class;
 using System;
@@ -24,6 +25,8 @@ namespace BECMS.Entity.EntityDbContext {
 
         public DbSet<User> Users { get; set; }
         public DbSet<Patient> Patients { get; set; }
+        public DbSet<PatientRecord> PatientRecords { get; set; }
+        public DbSet<PatientRecordItem> PatientRecordItems { get; set; }
 
     }
 }

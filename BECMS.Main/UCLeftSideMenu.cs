@@ -42,10 +42,15 @@ namespace BECMS.Main {
                 Title = "Manage Patients",
                 SubMenus = new List<BaseMenuButtonModel> {
                     new BaseMenuButtonModel{
-                        Title = "List",
+                        Title = "Patient Info",
                         ClickActionAsync = ManagePatientAsync,
                         ButtonColor = Color.LightGray,
-                    }
+                    },
+                    new BaseMenuButtonModel{
+                        Title = "Patient Records",
+                        ClickActionAsync = ManagePatientRecordsAsync,
+                        ButtonColor = Color.LightGray,
+                    },
                 }
             };
 
@@ -59,6 +64,9 @@ namespace BECMS.Main {
         }
         private async Task ManagePatientAsync() {
             await FormLayer.ListForm.ListPatient();
+        }
+        private async Task ManagePatientRecordsAsync() {
+            await FormLayer.ListForm.ListPatientRecord();
         }
     }
 }

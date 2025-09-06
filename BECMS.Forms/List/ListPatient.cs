@@ -47,5 +47,8 @@ namespace BECMS.Forms.List {
             }
             return true;
         }
+        protected override async Task<bool> GetSelectedData() {
+            return await Task.FromResult(patientModelCDatagridview.GetSelectedValue(Id.Index, out Form_IdTrack));
+        }
     }
 }

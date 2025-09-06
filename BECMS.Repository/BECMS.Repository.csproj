@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PatientRecordRepository.cs" />
     <Compile Include="PatientRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRepository.cs" />
