@@ -46,6 +46,11 @@ namespace BECMS.Forms {
                 return await repo.SaveModelAsync(model, model.Items);
             }
         }
+        protected override async Task<bool> OnUpdateData() {
+            using (var repo = new PatientRecordRepository()) {
+                return await repo.UpdateModelAsync(model, model.Items);
+            }
+        }
         private void AddButtonClicked(object sender, EventArgs e) {
             model.Items.Add(new PatientRecordItemModel());
             RefreshDataSource();
