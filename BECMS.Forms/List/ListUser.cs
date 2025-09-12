@@ -17,12 +17,15 @@ namespace BECMS.Forms.List {
     public partial class ListUser : ListForm {
         public ListUser() {
             InitializeComponent();
-            userModelCDatagridview.ApplyCustomAttribute(typeof(UserModel));
+        }
+        protected override async Task InitializeFormPropertiesAsync() {
+            MainModelDataGridView = userModelCDatagridview;
+            await base.InitializeFormPropertiesAsync();
         }
         protected override async Task RefreshDataAsync() {
             using(var repo = new UserRepository()) {
                 var users = repo.GetAllAsync(searchValue, dateFrom, dateTo);
-                await userModelBindingSource.LoadDataAsync(users);
+                await LoadDataGridViewAsync(users);
             }
         }
         protected override async Task<bool> AddNewItemAsync() {

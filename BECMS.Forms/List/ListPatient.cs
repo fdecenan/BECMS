@@ -18,12 +18,15 @@ namespace BECMS.Forms.List {
     public partial class ListPatient : ListForm {
         public ListPatient() {
             InitializeComponent();
-            patientModelCDatagridview.ApplyCustomAttribute(typeof(PatientModel));
+        }
+        protected override async Task InitializeFormPropertiesAsync() {
+            MainModelDataGridView = patientModelCDatagridview;
+            await base.InitializeFormPropertiesAsync();
         }
         protected override async Task RefreshDataAsync() {
             using (var repo = new PatientRepository()) {
                 var entity = repo.GetAllAsync(searchValue, dateFrom, dateTo);
-                await patientModelBindingSource.LoadDataAsync(entity);
+                await LoadDataGridViewAsync(entity);
             }
         }
         protected override async Task<bool> AddNewItemAsync() {
