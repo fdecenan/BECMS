@@ -19,16 +19,16 @@ namespace BECMS.Forms.List {
             InitializeComponent();
             userModelCDatagridview.ApplyCustomAttribute(typeof(UserModel));
         }
-        protected override async Task RefreshData() {
+        protected override async Task RefreshDataAsync() {
             using(var repo = new UserRepository()) {
                 var users = repo.GetAllAsync(searchValue, dateFrom, dateTo);
                 await userModelBindingSource.LoadDataAsync(users);
             }
         }
-        protected override async Task<bool> AddNewItem() {
+        protected override async Task<bool> AddNewItemAsync() {
             return await FormLayer.ManageForm.ManageUser(Guid.Empty, FormMode.Add);
         }
-        protected override async Task<bool> UpdateItem() {
+        protected override async Task<bool> UpdateItemAsync() {
             if(userModelCDatagridview.GetSelectedValue(Id.Index, out Form_IdTrack)) {
                 return await FormLayer.ManageForm.ManageUser(Form_IdTrack.ToGuid(), FormMode.Update);
             }
