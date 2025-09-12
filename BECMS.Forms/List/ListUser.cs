@@ -25,7 +25,7 @@ namespace BECMS.Forms.List {
         protected override async Task RefreshDataAsync() {
             using(var repo = new UserRepository()) {
                 var users = repo.GetAllAsync(searchValue, dateFrom, dateTo);
-                await LoadDataGridViewAsync(users);
+                await userModelBindingSource.LoadDataAsync(users);
             }
         }
         protected override async Task<bool> AddNewItemAsync() {
