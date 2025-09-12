@@ -20,7 +20,7 @@ namespace BECMS.Forms.Forms {
             InitializeComponent();
         }
 
-        protected override async Task LoadComponents() {
+        protected override async Task LoadComponentsAsync() {
             userModelBindingSource.DataSource = userModel;
             userModel.UserName = CConfigurationManager.GetRememberedUsername(cbRememberMe, userNameCTextBoxKrypton);
             await Task.CompletedTask;
@@ -31,12 +31,12 @@ namespace BECMS.Forms.Forms {
         }
 
         private async void cButtonLogin_Click(object sender, EventArgs e) {
-            if (await OnSaveData()) {
+            if (await OnSaveDataAsync()) {
                 CurrentFormResult = Task.FromResult(true);
                 this.Close();
             }
         }
-        protected override async Task<bool> OnSaveData() {
+        protected override async Task<bool> OnSaveDataAsync() {
             using (var repo = new UserRepository()) {
                 return await repo.CheckCredentialsAsync(userModel);
             }

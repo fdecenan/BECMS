@@ -18,7 +18,7 @@ namespace BECMS.Forms {
         public ManagePatientRecord() {
             InitializeComponent();
         }
-        protected override async Task LoadComponents() {
+        protected override async Task LoadComponentsAsync() {
             switch (CurrentFormMode) {
                 case FormMode.Add:
                     using (var repo = new PatientRecordRepository()) {
@@ -36,24 +36,29 @@ namespace BECMS.Forms {
             }
             patientRecordModelBindingSource.DataSource = model;
             patientRecordItemModelBindingSource.DataSource = model.Items;
-            RefreshDataSource();
         }
-        protected override void InitializeFormProperties() {
+        protected override async Task InitializeFormPropertiesAsync() {
+            // Binding Source
+            MainModelBindingSource = patientRecordModelBindingSource;
+            ItemModelBindingSource = patientRecordItemModelBindingSource;
+            ItemModelDataGridView = patientRecordItemModelCDatagridview;
+
             cToolstripItems.AddButtonClick += AddButtonClicked;
+            await base.InitializeFormPropertiesAsync();
         }
-        protected override async Task<bool> OnSaveData() {
+        protected override async Task<bool> OnSaveDataAsync() {
             using (var repo = new PatientRecordRepository()) {
                 return await repo.SaveModelAsync(model, model.Items);
             }
         }
-        protected override async Task<bool> OnUpdateData() {
+        protected override async Task<bool> OnUpdateDataAsync() {
             using (var repo = new PatientRecordRepository()) {
                 return await repo.UpdateModelAsync(model, model.Items);
             }
         }
-        private void AddButtonClicked(object sender, EventArgs e) {
+        private async void AddButtonClicked(object sender, EventArgs e) {
             model.Items.Add(new PatientRecordItemModel());
-            RefreshDataSource();
+            await RefreshDataSourceAsync();
         }
 
         private async void linkLabelSelectPatient_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
@@ -64,12 +69,7 @@ namespace BECMS.Forms {
                     model.Name = entity.Name;
                 }
             }
-            RefreshDataSource();
-        }
-        private void RefreshDataSource() {
-            patientRecordModelBindingSource.ResetBindings(false);
-            patientRecordItemModelBindingSource.ResetBindings(false);
-            patientRecordItemModelCDatagridview.ApplyCustomAttribute(typeof(PatientRecordItemModel));
+            await RefreshDataSourceAsync();
         }
     }
 }

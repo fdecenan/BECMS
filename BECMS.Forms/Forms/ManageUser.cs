@@ -18,7 +18,7 @@ namespace BECMS.Forms.Forms {
         public ManageUser() {
             InitializeComponent();
         }
-        protected override async Task LoadComponents() {
+        protected override async Task LoadComponentsAsync() {
             userRoleCComboBoxKrypton.FillComboBoxEnum<CBaseEnums.Role>();
             switch (CurrentFormMode) {
                 case FormMode.Add:
@@ -35,12 +35,12 @@ namespace BECMS.Forms.Forms {
             }
             userModelBindingSource.DataSource = model;
         }
-        protected override async Task<bool> OnSaveData() {
+        protected override async Task<bool> OnSaveDataAsync() {
             using (var repo = new UserRepository()) {
                 return await repo.SaveDTOAsync(model, true);
             }
         }
-        protected override async Task<bool> OnUpdateData() {
+        protected override async Task<bool> OnUpdateDataAsync() {
             using (var repo = new UserRepository()) {
                 return await repo.UpdateDTOAsync(model, true);
             }
