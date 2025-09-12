@@ -42,10 +42,13 @@ namespace BECMS.Forms {
             MainModelBindingSource = patientRecordModelBindingSource;
             ItemModelBindingSource = patientRecordItemModelBindingSource;
             ItemModelDataGridView = patientRecordItemModelCDatagridview;
-
-            cToolstripItems.AddButtonClick += AddButtonClicked;
             await base.InitializeFormPropertiesAsync();
         }
+        protected override void LoadFormEventHandler() {
+            cToolstripItems.AddButtonClick += AddButtonClicked;
+            cToolstripItems.DeleteButtonClick += DeleteButtonClicked;
+        }
+
         protected override async Task<bool> OnSaveDataAsync() {
             using (var repo = new PatientRecordRepository()) {
                 return await repo.SaveModelAsync(model, model.Items);
@@ -58,6 +61,11 @@ namespace BECMS.Forms {
         }
         private async void AddButtonClicked(object sender, EventArgs e) {
             model.Items.Add(new PatientRecordItemModel());
+            await RefreshDataSourceAsync();
+        }
+        private async void DeleteButtonClicked(object sender, EventArgs e) {
+            var itemModel = await GetDataGridViewModelItemAsync<PatientRecordItemModel>();
+            model.Items.Remove(itemModel);
             await RefreshDataSourceAsync();
         }
 
