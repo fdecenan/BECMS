@@ -22,7 +22,7 @@ namespace BECMS.Repository {
 
         public async Task<IEnumerable<PatientModel>> GetViewAsync(string searchText = "", DateTime? dateFrom = null, DateTime? dateTo = null, int dataLimit = 100) {
             
-            var query = await GetAllWithSearchAsync(searchText, dateFrom, dateTo);
+            var query = await GetAllWithSearchAsync(searchText, dateFrom, dateTo, dataLimit);
 
             var result = await query.SelectListAsync(async c => {
 
@@ -32,7 +32,7 @@ namespace BECMS.Repository {
 
                 return model;
 
-            }, model => model.SearchForDate(dateFrom, dateTo), dataLimit);
+            });
 
             return result;
 
