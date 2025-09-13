@@ -79,10 +79,6 @@
             // 
             this.panelMain1.Size = new System.Drawing.Size(517, 73);
             // 
-            // userModelBindingSource
-            // 
-            this.userModelBindingSource.DataSource = typeof(BECMS.Models.Users.UserModel);
-            // 
             // userNameLabel
             // 
             userNameLabel.AutoSize = true;
@@ -92,6 +88,40 @@
             userNameLabel.Size = new System.Drawing.Size(93, 20);
             userNameLabel.TabIndex = 2;
             userNameLabel.Text = "User Name:";
+            // 
+            // passwordLabel
+            // 
+            passwordLabel.AutoSize = true;
+            passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            passwordLabel.Location = new System.Drawing.Point(26, 125);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new System.Drawing.Size(82, 20);
+            passwordLabel.TabIndex = 4;
+            passwordLabel.Text = "Password:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nameLabel.Location = new System.Drawing.Point(26, 27);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(55, 20);
+            nameLabel.TabIndex = 0;
+            nameLabel.Text = "Name:";
+            // 
+            // userRoleLabel
+            // 
+            userRoleLabel.AutoSize = true;
+            userRoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            userRoleLabel.Location = new System.Drawing.Point(249, 125);
+            userRoleLabel.Name = "userRoleLabel";
+            userRoleLabel.Size = new System.Drawing.Size(84, 20);
+            userRoleLabel.TabIndex = 6;
+            userRoleLabel.Text = "User Role:";
+            // 
+            // userModelBindingSource
+            // 
+            this.userModelBindingSource.DataSource = typeof(BECMS.Models.Users.UserModel);
             // 
             // userNameCTextBoxKrypton
             // 
@@ -134,21 +164,12 @@
             this.userNameCTextBoxKrypton.TabIndex = 3;
             this.userNameCTextBoxKrypton.Text = "cTextBoxKrypton1";
             // 
-            // passwordLabel
-            // 
-            passwordLabel.AutoSize = true;
-            passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            passwordLabel.Location = new System.Drawing.Point(26, 125);
-            passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(82, 20);
-            passwordLabel.TabIndex = 4;
-            passwordLabel.Text = "Password:";
-            // 
             // passwordCTextBoxKrypton
             // 
             this.passwordCTextBoxKrypton.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userModelBindingSource, "Password", true));
             this.passwordCTextBoxKrypton.Location = new System.Drawing.Point(30, 161);
             this.passwordCTextBoxKrypton.Name = "passwordCTextBoxKrypton";
+            this.passwordCTextBoxKrypton.PasswordChar = '●';
             this.passwordCTextBoxKrypton.Size = new System.Drawing.Size(207, 29);
             this.passwordCTextBoxKrypton.StateActive.Back.Color1 = System.Drawing.Color.WhiteSmoke;
             this.passwordCTextBoxKrypton.StateActive.Border.Color1 = System.Drawing.Color.DarkGray;
@@ -184,16 +205,7 @@
             this.passwordCTextBoxKrypton.StateNormal.Content.Color1 = System.Drawing.Color.Black;
             this.passwordCTextBoxKrypton.TabIndex = 5;
             this.passwordCTextBoxKrypton.Text = "cTextBoxKrypton1";
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nameLabel.Location = new System.Drawing.Point(26, 27);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(55, 20);
-            nameLabel.TabIndex = 0;
-            nameLabel.Text = "Name:";
+            this.passwordCTextBoxKrypton.UseSystemPasswordChar = true;
             // 
             // nameCTextBoxKrypton
             // 
@@ -235,16 +247,6 @@
             this.nameCTextBoxKrypton.StateNormal.Content.Color1 = System.Drawing.Color.Black;
             this.nameCTextBoxKrypton.TabIndex = 1;
             this.nameCTextBoxKrypton.Text = "cTextBoxKrypton1";
-            // 
-            // userRoleLabel
-            // 
-            userRoleLabel.AutoSize = true;
-            userRoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            userRoleLabel.Location = new System.Drawing.Point(249, 125);
-            userRoleLabel.Name = "userRoleLabel";
-            userRoleLabel.Size = new System.Drawing.Size(84, 20);
-            userRoleLabel.TabIndex = 6;
-            userRoleLabel.Text = "User Role:";
             // 
             // userRoleCComboBoxKrypton
             // 
