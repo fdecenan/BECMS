@@ -2,6 +2,8 @@
 using BECMS.Entity.Patients;
 using BECMS.Models.Patients;
 using FerPROJ.DBHelper.Base;
+using FerPROJ.DBHelper.DBExtensions;
+using FerPROJ.Design.Class;
 using FerPROJ.Design.Controls;
 using FerPROJ.Design.Interface;
 using System;
@@ -11,15 +13,29 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BECMS.Repository {
-    public class PatientRepository : BaseRepository<BECMSDbContext, PatientModel, Patient, Guid>, IEntityDataAsync<Patient> {
+    public class PatientRepository : BaseRepository<BECMSDbContext, PatientModel, Patient, Guid>, IModelViewAsync<PatientModel> {
         public PatientRepository() {
         }
 
         public PatientRepository(BECMSDbContext ts) : base(ts) {
         }
 
-        public async Task<IEnumerable<Patient>> GetAllAsync(string searchText, DateTime? dateFrom, DateTime? dateTo) {
-            return await GetAllWithSearchAsync(searchText, dateFrom, dateTo);
+        public async Task<IEnumerable<PatientModel>> GetViewAsync(string searchText = "", DateTime? dateFrom = null, DateTime? dateTo = null, int dataLimit = 100) {
+            
+            var query = await GetAllWithSearchAsync(searchText, dateFrom, dateTo);
+
+            var result = await query.SelectListAsync(async c => {
+
+                var model = c.ToDestination<PatientModel>();
+
+                await Task.CompletedTask;
+
+                return model;
+
+            }, model => model.SearchForDate(dateFrom, dateTo), dataLimit);
+
+            return result;
+
         }
 
         public Task<string> GetNewIDAsync() {

@@ -14,16 +14,28 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BECMS.Repository {
-    public class UserRepository : BaseRepository<BECMSDbContext, UserModel, User, Guid>, IEntityDataAsync<User> {
+    public class UserRepository : BaseRepository<BECMSDbContext, UserModel, User, Guid>, IModelViewAsync<UserModel> {
         public UserRepository() {
         }
 
         public UserRepository(BECMSDbContext ts) : base(ts) {
         }
 
-        public async Task<IEnumerable<User>> GetAllAsync(string searchText, DateTime? dateFrom, DateTime? dateTo) {
+        public async Task<IEnumerable<UserModel>> GetViewAsync(string searchText = "", DateTime? dateFrom = null, DateTime? dateTo = null, int dataLimit = 100) {
+            
             var query = await GetAllWithSearchAsync(searchText, dateFrom, dateTo);
-            return query;
+
+            var result = await query.SelectListAsync(async c => {
+                
+                var model = c.ToDestination<UserModel>();
+                
+                await Task.CompletedTask;
+                
+                return model;
+
+            }, model => model.SearchForDate(dateFrom, dateTo), dataLimit);
+
+            return result;
         }
 
         public Task<string> GetNewIDAsync() {

@@ -24,7 +24,7 @@ namespace BECMS.Forms.List {
         }
         protected override async Task RefreshDataAsync() {
             using(var repo = new UserRepository()) {
-                var users = repo.GetAllAsync(searchValue, dateFrom, dateTo);
+                var users = repo.GetViewAsync(searchValue, dateFrom, dateTo);
                 await userModelBindingSource.LoadDataAsync(users);
             }
         }
@@ -34,6 +34,14 @@ namespace BECMS.Forms.List {
         protected override async Task<bool> UpdateItemAsync() {
             if(userModelCDatagridview.GetSelectedValue(Id.Index, out Form_IdTrack)) {
                 return await FormLayer.ManageForm.ManageUser(Form_IdTrack.ToGuid(), FormMode.Update);
+            }
+            return false;
+        }
+        protected override async Task<bool> DeleteItemAsync() {
+            if (userModelCDatagridview.GetSelectedValue(Id.Index, out Form_IdTrack)) {
+                using (var repo = new UserRepository()) {
+                    return await repo.DeleteByIdAsync(Form_IdTrack.ToGuid());
+                }
             }
             return false;
         }

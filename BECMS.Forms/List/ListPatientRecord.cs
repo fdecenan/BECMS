@@ -29,5 +29,13 @@ namespace BECMS.Forms.List {
             }
             return false;
         }
+        protected override async Task<bool> DeleteItemAsync() {
+            if (patientRecordModelCDatagridview.GetSelectedValue(Id.Index, out Form_IdTrack)) {
+                using (var repo = new PatientRecordRepository()) {
+                    return await repo.DeleteByIdAsync(Form_IdTrack.ToGuid());
+                }
+            }
+            return false;
+        }
     }
 }

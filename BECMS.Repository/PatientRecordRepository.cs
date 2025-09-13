@@ -2,6 +2,8 @@
 using BECMS.Entity.PatientRecords;
 using BECMS.Models.PatientRecords;
 using FerPROJ.DBHelper.Base;
+using FerPROJ.DBHelper.DBExtensions;
+using FerPROJ.Design.Class;
 using FerPROJ.Design.Interface;
 using System;
 using System.Collections.Generic;
@@ -17,8 +19,22 @@ namespace BECMS.Repository {
         public PatientRecordRepository(BECMSDbContext ts) : base(ts) {
         }
 
-        public async Task<IEnumerable<PatientRecordModel>> GetViewAsync(string searchText = "", int dataLimit = 100, DateTime? dateFrom = null, DateTime? dateTo = null) {
-            return await GetAllModelWithSearchAsync(searchText, dateFrom, dateTo);
+        public async Task<IEnumerable<PatientRecordModel>> GetViewAsync(string searchText = "", DateTime? dateFrom = null, DateTime? dateTo = null, int dataLimit = 100) {
+            
+            var query = await GetAllWithSearchAsync(searchText, dateFrom, dateTo);
+
+            var result = await query.SelectListAsync(async c => {
+                
+                var model = c.ToDestination<PatientRecordModel>();
+                
+                await Task.CompletedTask;
+                
+                return model;
+
+            }, model => model.SearchForDate(dateFrom, dateTo), dataLimit);
+
+            return result;
+
         }
     }
 }
